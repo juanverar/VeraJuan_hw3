@@ -17,3 +17,4 @@ plt.figure()
 plt.imshow(np.abs(fourier(arbol)), cmap=cm.Greys_r, norm = LogNorm())
 plt.show()
 
+
