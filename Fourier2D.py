@@ -3,27 +3,17 @@ import matplotlib.pyplot as plt
 from scipy import fftpack, ndimage
 from matplotlib.colors import LogNorm
 import matplotlib.cm as cm
-import cv2
+from PIL import Image
 
-
-
-img=cv.LoadImage("arbol.png")
+#Convertir la imagen a un array
+img=Image.open('arbol.png').convert('RGBA')
 arbol=np.asarray(img)
 
+#Aplicar Fourirer al arreglo
 def fourier(imagen):
 	return fftpack.fft2(imagen)
 
 plt.figure()
 plt.imshow(np.abs(fourier(arbol)), cmap=cm.Greys_r, norm = LogNorm())
-plt.show()
-
-#def Corte(imagen):
-#	f = np.abs(fourier(imagen))
-#	row = f.shape[0]
-#	centro = int(row/2)
-#	return f[centro, :]
-
-plt.figure()
-plt.plot(Corte(arbol))
 plt.show()
 
