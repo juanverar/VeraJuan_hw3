@@ -18,6 +18,7 @@ plt.imshow(np.abs(fourier(arbol)), cmap=cm.Greys_r, norm = LogNorm())
 plt.show()
 print len(arbol[1])
 #def filtro():
+
 #	for i in range(len(arbol[0])):
 		
 #Aplicar la inversa de Fourier al arreglo flitrado.
