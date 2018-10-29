@@ -16,6 +16,7 @@ def fourier(imagen):
 plt.figure()
 plt.imshow(np.abs(fourier(arbol)), cmap=cm.Greys_r, norm = LogNorm())
 plt.show()
+<<<<<<< HEAD
 print len(arbol[1])
 #def filtro():
 #	for i in range(len(arbol[0])):
@@ -27,3 +28,4 @@ arbol1 = plt.rcParams['image.cmap'] ='gray'
 plt.figure()
 plt.imshow(np.abs(inversa(fourier(arbol))), cmap=cm.Greys_r, norm = LogNorm())
 plt.show()
+
