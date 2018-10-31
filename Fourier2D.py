@@ -33,16 +33,15 @@ imagen2=filtro()
 nueva=fftpack.ifftshift(imagen2)
 iff=fftpack.ifft2(nueva)
 
-#Grafica de la transformada filtrada.
+#4.4 Grafica de la transformada filtrada.
 plt.figure()
 plt.imshow(np.log(np.abs(imagen2)), cmap=cm.autumn, norm = LogNorm())
 plt.title('Grafica de la transformada filtrada')
 plt.colorbar()
 plt.savefig('VeraJuan_FT2D_filtrada.pdf')
 
-#Grafica de la imagen filtrada aplicada la inversa de la transformada.
+#4.5 Grafica de la imagen filtrada aplicada la inversa de la transformada.
 plt.figure()
 plt.imshow(np.abs(iff), cmap='gray', norm = LogNorm())
 plt.title('Grafica de la imagen filtrada')
-plt.show()
-#plt.savefig('VeraJuan_Imagen_filtrada.pdf')
+plt.savefig('VeraJuan_Imagen_filtrada.pdf')
